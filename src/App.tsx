@@ -70,7 +70,7 @@ const App = () => {
       )}
       {
         (userData && !loading && !error) &&
-        < UserProfile userData={userData} repos={userRepoList} />
+        < UserProfile userData={userData} />
       }
     </div>
   )
