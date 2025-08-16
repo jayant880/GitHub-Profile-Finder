@@ -7,18 +7,26 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ getUsername }) => {
     const [search, setSearch] = useState<string>('');
     const handleSearch = () => {
-        getUsername(search);
+        if (search.trim()) getUsername(search)
         setSearch('')
     }
     return (
-        <div>
-            <input
-                type="text"
-                placeholder="Enter a github Profile"
-                value={search}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
-                onKeyDown={(e) => { if (e.key === 'Enter') handleSearch() }}
-            />
+        <div className="mb-6">
+            <div className="flex shadow-md rounded-lg overflow-hidden">
+                <input
+                    className="flex-grow px-4 py-3 focus:outline-none"
+                    type="text"
+                    placeholder="Enter GitHub username"
+                    value={search}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === 'Enter') handleSearch() }}
+                />
+                <button
+                    onClick={handleSearch}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 transtion">
+                    Search
+                </button>
+            </div>
         </div>
     )
 }
