@@ -23,7 +23,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ userData }) => {
                             href={userData.html_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition">
+                            className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition animate-pulse">
                             {userData.name || userData.login}
                         </a>
                         {userData.twitter_username && (
