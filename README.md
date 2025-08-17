@@ -7,6 +7,8 @@ A beautiful interface for viewing GitHub profiles and repositories.
 
 ## Screen Shot
 ![alt text](image.png)
+### error
+![alt text](image-1.png)
 
 ## Features
 
