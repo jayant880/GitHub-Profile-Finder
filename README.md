@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
+# GitHub Profile Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful interface for viewing GitHub profiles and repositories.
 
-Currently, two official plugins are available:
+## Demo
+[Demo](https://git-hub-profile-finder-ten.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screen Shot
+![alt text](image.png)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔎 Search any GitHub user
+- 👤 View profile details (bio, location, stats)
+- 📂 Browse repositories with:
+  - 🔍 Search by name/description
+  - 🏷️ Filter by source/forks
+- 📊 See repository stats (stars, forks, watchers)
+- 🎨 Clean, responsive design
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## How to Use
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. Enter a GitHub username
+2. View their profile information
+3. Explore their repositories
+4. Use filters to find specific repos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Built With
+
+- React + TypeScript
+- Tailwind CSS
+- Lucide Icons
+- GitHub API
+
+## Installation
+
+1. Clone the repo:
+```bash
+git clone git@github.com:jayant880/GitHub-Profile-Finder.git
 ```
+2. Navigate to the project directory: 
+```bash
+cd GitHub-Profile-Finder
+```
+3. Install dependencies:
+```bash
+npm install
+```
+4. Start the development server
+```bash
+npm run dev
+```
+5. open the browse `http://localhost:5173`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
+```
+src/
+├── components/ # UI components
+├── types/ # Type definitions
+├── App.tsx # Main app
+└── main.tsx # Entry point
 ```
